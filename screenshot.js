@@ -52,7 +52,7 @@ document.getElementById("start-button").addEventListener("click", function() {
     frame = frame.dataUri;
     mergeImages([frame, aScene]).then(b64 => {
     document.getElementById("results").style.display="block"
-    var img = document.getElementById("results").innerHTML = '<img src="'+b64+ '" id="img" class="img-fluid" style="width:100vw ; height: 100vh ;)"/>'
+    var img = document.getElementById("results").innerHTML = '<img src="'+b64+ '" id="img" class="img-fluid" style="width:100%; height: 100% ;)"/>'
     if(img)
     {  
         let link = document.getElementById("descarga-link", "jpeg");
