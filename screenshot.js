@@ -61,7 +61,7 @@ document.getElementById("start-button").addEventListener("click", function() {
     }
     console.log("screenshot taken");
 });
-}, 1000); // 10 seconds timeout
+}, 10000); // 10 seconds timeout
 });
 
 
