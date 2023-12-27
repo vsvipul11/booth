@@ -53,6 +53,12 @@ document.getElementById("start-button").addEventListener("click", function() {
     mergeImages([frame, aScene]).then(b64 => {
     document.getElementById("results").style.display="block"
     var img = document.getElementById("results").innerHTML = '<img src="'+b64+ '" id="img" class="img-fluid" style="width:100% ; height: 100% ;)"/>'
+    
+    var btn_hide_img = document.createElement("img");
+    // btn_hide_img.innerHTML= "exit";
+    btn_hide_img.setAttribute("src", "./players/boothicon.png")
+    btn_hide_img.setAttribute("id", "hide")
+    document.getElementById("results").appendChild(btn_hide_img)
     if(img)
     {  
         let link = document.getElementById("descarga-link", "jpeg");
