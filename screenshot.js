@@ -2,18 +2,18 @@ function resizeCanvas(origCanvas, width, height) {
     let resizedCanvas = document.createElement("canvas");
     let resizedContext = resizedCanvas.getContext("2d");
 
-    if (screen.width < screen.height)
-    {
-        var w = height * (height / width);
-        var h = width * (height / width);
-        var offsetX = -(height - width);
-    }
-    else
-    {
+    // if (screen.width < screen.height)
+    // {
+    //     var w = height * (height / width);
+    //     var h = width * (height / width);
+    //     var offsetX = -(height - width);
+    // }
+    // else
+    // {
         var w = width;
         var h = height;
         var offsetX = 0;
-    }
+    // }
 
     resizedCanvas.height = height;
     resizedCanvas.width = width;
@@ -52,7 +52,7 @@ document.getElementById("start-button").addEventListener("click", function() {
     frame = frame.dataUri;
     mergeImages([frame, aScene]).then(b64 => {
     document.getElementById("results").style.display="block"
-    var img = document.getElementById("results").innerHTML = '<img src="'+b64+ '" id="img" class="img-fluid" style="width:100%; height: 100% ;)"/>'
+    var img = document.getElementById("results").innerHTML = '<img src="'+b64+ '" id="img" class="img-fluid" style="width:100% ; height: 100% ;)"/>'
     if(img)
     {  
         let link = document.getElementById("descarga-link", "jpeg");
@@ -61,7 +61,7 @@ document.getElementById("start-button").addEventListener("click", function() {
     }
     console.log("screenshot taken");
 });
-}, 10000); // 10 seconds timeout
+}, 1000); // 10 seconds timeout
 });
 
 
