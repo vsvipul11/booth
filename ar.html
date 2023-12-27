@@ -696,7 +696,17 @@ function countdown(seconds) {
         
 
   
-            var splashScreen = document.getElementById("splash-screen");
+          
+      }
+ 
+      function closePopup() {
+        // Close the popup
+        document.getElementById('popup').style.display = 'none';
+
+        
+    }
+
+      var splashScreen = document.getElementById("splash-screen");
 
             // Check if the browser supports fullscreen API
             function requestFullscreen() {
@@ -715,14 +725,6 @@ function countdown(seconds) {
             fullscreenButton.addEventListener("click", requestFullscreen);
         
 
-      }
- 
-      function closePopup() {
-        // Close the popup
-        document.getElementById('popup').style.display = 'none';
-
-        
-    }
 
     
 </script>
