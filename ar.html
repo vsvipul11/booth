@@ -17,7 +17,7 @@
     <script src="./gesture-detector.js"></script>
     <script src="./hold-drag.js"></script>
     <script src="./pinch-scale.js"></script>
-    <script src=".two-finger-spin.js"></script>
+    <script src="./two-finger-spin.js"></script>
     <script src="./tap-to.js"></script>
     <script src="./chroma.js"
     crossorigin="anonymous">
@@ -287,7 +287,7 @@
     
  <button style=" position: absolute; top: 0px; border-radius: 15px ; background-color: white;
  color: #ff6500;
- border: 0px " id="fullscreen-button">Fullscreen</button>
+ border: 0px;  z-index: 110;" id="fullscreen-button" onclick="">Fullscreen</button>
 
    
 
@@ -298,9 +298,12 @@
       <a id="descarga-link" href="#"></a>
     </div>
     <!-- Model content for displaying grey color  -->
-    <div id="myModelBg" class="Model-bg info-results"></div>
+    <div id="myModelBg" class="Model-bg info-results">
+    </div>
     <!-- create screenshot layer -->
     <div id="results" class="">
+      <img src="" id="img" />
+
       <!-- screenshot image will be display within this div -->
     </div>
     <!-- used for image watermark -->
@@ -622,7 +625,7 @@ function countdown(seconds) {
      
         
         entityVideo.setAttribute("material", "shader: chromakey; src: #video; color: 0 0.56 0.9");
-        entityVideo1.setAttribute("material", "shader: chromakey; src: #video1; color: 0 0.56 0.9");
+        entityVideo1.setAttribute("material", "shader: chromakey; src: #video1; color:0 0.56 0.9");
               
              video.play();
              video1.play();
@@ -696,18 +699,12 @@ function countdown(seconds) {
         
 
   
-          
-      }
- 
-      function closePopup() {
-        // Close the popup
-        document.getElementById('popup').style.display = 'none';
+            
 
-        
-    }
+
+      }
 
       var splashScreen = document.getElementById("splash-screen");
-
             // Check if the browser supports fullscreen API
             function requestFullscreen() {
                 if (splashScreen.requestFullscreen) {
@@ -723,10 +720,29 @@ function countdown(seconds) {
 
             var fullscreenButton = document.getElementById("fullscreen-button");
             fullscreenButton.addEventListener("click", requestFullscreen);
+            fullscreenButton.addEventListener("click", console.log('hello'));
         
+ 
+      function closePopup() {
+        // Close the popup
+        document.getElementById('popup').style.display = 'none';
 
+        
+    }
 
     
+</script>
+<script>      
+  AFRAME.components.screenshot.Component.prototype.getRenderTarget = function (width, height) {
+      return new THREE.WebGLRenderTarget(width, height, {
+        minFilter: THREE.LinearFilter,
+        magFilter: THREE.LinearFilter,
+        wrapS: THREE.ClampToEdgeWrapping,
+        wrapT: THREE.ClampToEdgeWrapping,
+        format: THREE.RGBAFormat,
+        type: THREE.UnsignedByteType
+      });
+    }
 </script>
 <script src="./screenshot.js"></script>
     
