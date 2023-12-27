@@ -699,20 +699,20 @@ function countdown(seconds) {
             var splashScreen = document.getElementById("splash-screen");
 
             // Check if the browser supports fullscreen API
-            // function requestFullscreen() {
-            //     if (splashScreen.requestFullscreen) {
-            //         splashScreen.requestFullscreen();
-            //     } else if (splashScreen.mozRequestFullScreen) { // Firefox
-            //         splashScreen.mozRequestFullScreen();
-            //     } else if (splashScreen.webkitRequestFullscreen) { // Chrome, Safari and Opera
-            //         splashScreen.webkitRequestFullscreen();
-            //     } else if (splashScreen.msRequestFullscreen) { // IE/Edge
-            //         splashScreen.msRequestFullscreen();
-            //     }
-            // }
+            function requestFullscreen() {
+                if (splashScreen.requestFullscreen) {
+                    splashScreen.requestFullscreen();
+                } else if (splashScreen.mozRequestFullScreen) { // Firefox
+                    splashScreen.mozRequestFullScreen();
+                } else if (splashScreen.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    splashScreen.webkitRequestFullscreen();
+                } else if (splashScreen.msRequestFullscreen) { // IE/Edge
+                    splashScreen.msRequestFullscreen();
+                }
+            }
 
-            // var fullscreenButton = document.getElementById("fullscreen-button");
-            // fullscreenButton.addEventListener("click", requestFullscreen);
+            var fullscreenButton = document.getElementById("fullscreen-button");
+            fullscreenButton.addEventListener("click", requestFullscreen);
         
 
       }
