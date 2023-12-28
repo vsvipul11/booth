@@ -5992,7 +5992,7 @@
 										video: {
 											width: 1280,
 											height: 720,
-											facingMode: { exact: "user" },
+											facingMode: "user"
 										}
 									};
 									navigator.mediaDevices.getUserMedia(A).then((A => {
@@ -7237,7 +7237,7 @@
 				if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 					const A = {
 						video: {
-							facingMode:{ exact: "user" },
+							facingMode: 'user'
 						}
 					};
 					navigator.mediaDevices.getUserMedia(A).then((A => {
@@ -8036,7 +8036,7 @@
 				var Q = {
 					audio: !1,
 					video: {
-						facingMode: { exact: "user" },,
+						facingMode: 'user',
 						width: {
 							ideal: g.parameters.sourceWidth
 						},
