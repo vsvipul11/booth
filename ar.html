@@ -323,7 +323,12 @@
       id="logo-1"
     /> -->
 
-
+    <img id="image9" src="./videos/erignimg.png" style="    z-index: 100000;
+    width: 207px;
+    display: none;
+    height: 700px;
+    position: absolute;
+    top: 200px;">
                           <!-- audio element -->
      <audio id="my-audio" src=""></audio>
 
@@ -560,7 +565,7 @@ function startGame() {
 
         const entityImage = document.getElementById("entityimage");
         const entityImage1 = document.getElementById("entityimage");
-        entityImage.setAttribute('visible', 'true');
+        // entityImage.setAttribute('visible', 'true');
        const image = document.getElementById('image');
        const image1 = document.getElementById('image1');
        image.setAttribute("crossorigin", "anonymous");
@@ -630,8 +635,9 @@ function startGame() {
 
               
            
-            entityimage.setAttribute('visible', 'true');
-            entityImage1.setAttribute('visible', 'true');
+            // entityimage.setAttribute('visible', 'true');
+            // entityImage1.setAttribute('visible', 'true');
+            document.getElementById('image9').style.display = 'block';
 
 
           splashScreen.style.display = "none";
