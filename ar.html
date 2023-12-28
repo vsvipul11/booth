@@ -80,7 +80,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    z-index: 1005;
+    z-index: 105;
     visibility: visible;
     display: none;
     flex-direction: column;
@@ -244,6 +244,7 @@
   </head>
 
   <body>
+    <div class="specific" id="screenshot-container"></div>
     <div id="splash-screen" >
       <img id="banner1" style="width: 15em; margin-bottom: 2vh;" src="./players/bannersplash.png" alt="banner1">
       <div id="row1" style="display: flex; flex-direction: row; justify-content: center;">
@@ -292,6 +293,7 @@
  color: #ff6500;
  border: 0px;  z-index: 110;" id="fullscreen-button" onclick="">Fullscreen</button>
 
+<!-- <button type="button" id="btn" style="position: absolute; top: 0;" class="btn btn-default">Take a Screenshot!</button> -->
    
 
   
@@ -323,12 +325,20 @@
       id="logo-1"
     /> -->
 
-    <img id="image9" src="./videos/erignimg.png" style="    z-index: 1000;
-    width: 300px;
+    <img id="image9" src="" style="    z-index: 100000;
+    width: 207px;
     display: none;
     height: 1000px;
     position: absolute;
-    bottom: 20px;">
+    bottom: 50px;">
+
+<img id="image10" src=" " style="    z-index: 100000;
+width: 207px;
+display: none;
+height: 1000px;
+position: absolute;
+bottom: 50px;
+margin-left: 400px;">
                           <!-- audio element -->
      <audio id="my-audio" src=""></audio>
 
@@ -566,14 +576,12 @@ function startGame() {
         const entityImage = document.getElementById("entityimage");
         const entityImage1 = document.getElementById("entityimage");
         // entityImage.setAttribute('visible', 'true');
-       const image = document.getElementById('image');
-       const image1 = document.getElementById('image1');
-       image.setAttribute("crossorigin", "anonymous");
+       const image = document.getElementById('image9');
+       const image1 = document.getElementById('image10');
     
     
         
        
-     image1.setAttribute("crossorigin", "anonymous");
      if(selectedPlayers[0] == 'player1'){
       image.setAttribute('src', './videos/erignimg.png');
      }
@@ -584,7 +592,7 @@ function startGame() {
       image.setAttribute('src', './videos/Hernagomez.mp4');
      }
      if(selectedPlayers[0] == 'player4'){
-      image.setAttribute('src', './videos/KostasSloukas.mp4');
+      image.setAttribute('src', './videos/kostasSimg.png');
      }
      if(selectedPlayers[0] == 'player5'){
       image.setAttribute('src', './videos/ergin.mp4');
@@ -602,7 +610,7 @@ function startGame() {
       image.setAttribute('src', './videos/ergin.mp4');
      }
      if(selectedPlayers[1] == 'player1'){
-      image1.setAttribute('src', './videos/erign.mp4');
+      image1.setAttribute('src', './videos/erignimg.png');
      }
      if(selectedPlayers[1] == 'player2'){
       image1.setAttribute('src', './videos/ergin.mp4');
@@ -611,7 +619,7 @@ function startGame() {
       image1.setAttribute('src', './videos/Hernagomez.mp4');
      }
      if(selectedPlayers[1] == 'player4'){
-      image1.setAttribute('src', './videos/KostasSloukas.mp4');
+      image1.setAttribute('src', './videos/kostasSimg.png');
      }
      if(selectedPlayers[1] == 'player5'){
       image1.setAttribute('src', './videos/ergin.mp4');
@@ -638,6 +646,7 @@ function startGame() {
             // entityimage.setAttribute('visible', 'true');
             // entityImage1.setAttribute('visible', 'true');
             document.getElementById('image9').style.display = 'block';
+            document.getElementById('image10').style.display = 'block';
 
 
           splashScreen.style.display = "none";
@@ -777,26 +786,24 @@ function countdown(seconds) {
     }
 </script>
 <script src="./screenshot.js"></script>
+
+
+<!-- <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript"
+    src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 <script>
-    // Get user media with constraints
-    const constraints = {
-      video: true
-    };
-
-    // Access the user's camera
-    navigator.mediaDevices.getUserMedia(constraints)
-      .then((stream) => {
-        const videoElement = document.createElement('video');
-        videoElement.srcObject = stream;
-        videoElement.autoplay = true;
-        document.body.appendChild(videoElement);
-      })
-      .catch((error) => {
-        console.error('Error accessing the camera: ', error);
+    document.getElementById('btn').addEventListener('click', function() {
+      var canvas = document.getElementsByClassName('a-canvas')
+     var gl = canvas.getContext("webgl", { preserveDrawingBuffer: true });  
+      html2canvas(document.querySelector('.specific'), {
+          onrendered: function(canvas) {
+              // document.body.appendChild(canvas);
+            return Canvas2Image.saveAsPNG(canvas);
+          }
       });
-  </script>
-
-
+  });
+</script> -->
     
 
 </html>
