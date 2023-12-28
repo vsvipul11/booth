@@ -93,7 +93,7 @@
 }
 
 .playerimg{
- width: 8rem!important;
+ width: 5.5rem!important;
 }
 
      
@@ -244,19 +244,19 @@
     <div id="splash-screen">
       <img id="banner1" style="width: 15em; margin-bottom: 2vh;" src="./players/bannersplash.png" alt="banner1">
       <div id="row1" style="display: flex; flex-direction: row; justify-content: center;">
-        <img id="player1" class="playerimg" style="width: 5rem" src="./players/ergin.png" alt="Player1" onclick="toggleSelection('player1')">
-        <img id="player2" class="playerimg" style="width: 5rem"  src="./players/Jerian.png" alt="Player2" onclick="toggleSelection('player2')">
-        <img id="player3" class="playerimg" style="width: 5rem" src="./players/Juancho.png" alt="Player3" onclick="toggleSelection('player3')">
+        <img id="player1" class="playerimg" style="width: 3rem" src="./players/ergin.png" alt="Player1" onclick="toggleSelection('player1')">
+        <img id="player2" class="playerimg" style="width: 3rem"  src="./players/Jerian.png" alt="Player2" onclick="toggleSelection('player2')">
+        <img id="player3" class="playerimg" style="width: 3rem" src="./players/Juancho.png" alt="Player3" onclick="toggleSelection('player3')">
       </div>
       <div id="row2" class="playerimg" style="display: flex; flex-direction: row; justify-content: center;">
-        <img id="player4" class="playerimg" style="width: 5rem" src="./players/Kostas.png" alt="Player4" onclick="toggleSelection('player4')">
-        <img id="player5" class="playerimg" style="width: 5rem"  src="./players/KostasA.png" alt="Player5" onclick="toggleSelection('player5')">
-        <img id="player6" class="playerimg" style="width: 5rem" src="./players/loannis.png" alt="Player6" onclick="toggleSelection('player6')">
+        <img id="player4" class="playerimg" style="width: 3rem" src="./players/Kostas.png" alt="Player4" onclick="toggleSelection('player4')">
+        <img id="player5" class="playerimg" style="width: 3rem"  src="./players/KostasA.png" alt="Player5" onclick="toggleSelection('player5')">
+        <img id="player6" class="playerimg" style="width: 3rem" src="./players/loannis.png" alt="Player6" onclick="toggleSelection('player6')">
       </div>
       <div id="row2" class="playerimg" style="display: flex; flex-direction: row; justify-content: center;">
-        <img id="player7"class="playerimg" style="width: 5rem" src="./players/Mathias.png" alt="Player7" onclick="toggleSelection('player7')">
-        <img id="player8" class="playerimg" style="width: 5rem"  src="./players/Marius.png" alt="Player8" onclick="toggleSelection('player8')">
-        <img id="player9"  class="playerimg" style="width: 5rem" src="./players/Ninos.png" alt="Player9" onclick="toggleSelection('player9')">
+        <img id="player7"class="playerimg" style="width: 3rem" src="./players/Mathias.png" alt="Player7" onclick="toggleSelection('player7')">
+        <img id="player8" class="playerimg" style="width: 3rem"  src="./players/Marius.png" alt="Player8" onclick="toggleSelection('player8')">
+        <img id="player9"  class="playerimg" style="width: 3rem" src="./players/Ninos.png" alt="Player9" onclick="toggleSelection('player9')">
       </div>
       <div>
       <img  id = "start-button" src="./players/startbtn.png" alt="Button" onclick="startGame()">
@@ -421,7 +421,7 @@
         <a-video 
         id = "entityvideo"
         position="-3 1 0"
-        scale="4 4 2"
+        scale="4 10 2"
         reflections="type: realtime"
         shadow="receive: false"
         visible = "false"
@@ -430,7 +430,7 @@
         <a-video 
         id = "entityvideo1"
         position="2.8 1 0"
-        scale="4 4 2"
+        scale="4 10 2"
         reflections="type: realtime"
         shadow="receive: false"
         visible = "false"
@@ -580,7 +580,7 @@ function countdown(seconds) {
       video.setAttribute('src', './videos/Hernagomez.mp4');
      }
      if(selectedPlayers[0] == 'player4'){
-      video.setAttribute('src', './videos/ergin.mp4');
+      video.setAttribute('src', './videos/KostasSloukas.mp4');
      }
      if(selectedPlayers[0] == 'player5'){
       video.setAttribute('src', './videos/ergin.mp4');
@@ -607,7 +607,7 @@ function countdown(seconds) {
       video1.setAttribute('src', './videos/Hernagomez.mp4');
      }
      if(selectedPlayers[1] == 'player4'){
-      video1.setAttribute('src', './videos/ergin.mp4');
+      video1.setAttribute('src', './videos/KostasSloukas.mp4');
      }
      if(selectedPlayers[1] == 'player5'){
       video1.setAttribute('src', './videos/ergin.mp4');
@@ -626,8 +626,8 @@ function countdown(seconds) {
      }
      
         
-        entityVideo.setAttribute("material", "shader: chromakey; src: #video; color: 0 0.56 0.9");
-        entityVideo1.setAttribute("material", "shader: chromakey; src: #video1; color:0 0.56 0.9");
+        entityVideo.setAttribute("material", "shader: chromakey; src: #video; color: 0 0.4 0.9");
+        entityVideo1.setAttribute("material", "shader: chromakey; src: #video1; color:0 0.4 0.9");
               
              video.play();
              video1.play();
