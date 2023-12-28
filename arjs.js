@@ -7237,7 +7237,7 @@
 				if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 					const A = {
 						video: {
-							facingMode: "environment"
+							facingMode: "user"
 						}
 					};
 					navigator.mediaDevices.getUserMedia(A).then((A => {
@@ -8036,7 +8036,7 @@
 				var Q = {
 					audio: !1,
 					video: {
-						facingMode: "environment",
+						facingMode: "user",
 						width: {
 							ideal: g.parameters.sourceWidth
 						},
