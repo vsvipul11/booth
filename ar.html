@@ -57,10 +57,11 @@
     justify-content: flex-start;
     align-items: center;
     z-index: 105;
+    overflow: scroll;
 }
 
 #start-button {
-    position: absolute;
+   
     width: 10rem;
     bottom: 2rem;
     visibility: none;
@@ -94,8 +95,8 @@
 }
 
 .playerimg{
- width: 4rem!important;
-  height: auto;
+ width: 120px;
+ height: auto;
 }
 
      
@@ -243,24 +244,24 @@
   </head>
 
   <body>
-    <div id="splash-screen">
+    <div id="splash-screen" >
       <img id="banner1" style="width: 15em; margin-bottom: 2vh;" src="./players/bannersplash.png" alt="banner1">
       <div id="row1" style="display: flex; flex-direction: row; justify-content: center;">
-        <img id="player1" class="playerimg" style="width: 3rem" src="./players/ergin.png" alt="Player1" onclick="toggleSelection('player1')">
-        <img id="player2" class="playerimg" style="width: 3rem"  src="./players/Jerian.png" alt="Player2" onclick="toggleSelection('player2')">
-        <img id="player3" class="playerimg" style="width: 3rem" src="./players/Juancho.png" alt="Player3" onclick="toggleSelection('player3')">
+        <img id="player1" class="playerimg"  src="./players/ergin.png" alt="Player1" onclick="toggleSelection('player1')">
+        <img id="player2" class="playerimg"   src="./players/Jerian.png" alt="Player2" onclick="toggleSelection('player2')">
+        <img id="player3" class="playerimg"  src="./players/Juancho.png" alt="Player3" onclick="toggleSelection('player3')">
       </div>
       <div id="row2" class="playerimg" style="display: flex; flex-direction: row; justify-content: center;">
-        <img id="player4" class="playerimg" style="width: 3rem" src="./players/Kostas.png" alt="Player4" onclick="toggleSelection('player4')">
-        <img id="player5" class="playerimg" style="width: 3rem"  src="./players/KostasA.png" alt="Player5" onclick="toggleSelection('player5')">
-        <img id="player6" class="playerimg" style="width: 3rem" src="./players/loannis.png" alt="Player6" onclick="toggleSelection('player6')">
+        <img id="player4" class="playerimg"  src="./players/Kostas.png" alt="Player4" onclick="toggleSelection('player4')">
+        <img id="player5" class="playerimg"   src="./players/KostasA.png" alt="Player5" onclick="toggleSelection('player5')">
+        <img id="player6" class="playerimg"  src="./players/loannis.png" alt="Player6" onclick="toggleSelection('player6')">
       </div>
       <div id="row2" class="playerimg" style="display: flex; flex-direction: row; justify-content: center;">
-        <img id="player7"class="playerimg" style="width: 3rem" src="./players/Mathias.png" alt="Player7" onclick="toggleSelection('player7')">
-        <img id="player8" class="playerimg" style="width: 3rem"  src="./players/Marius.png" alt="Player8" onclick="toggleSelection('player8')">
-        <img id="player9"  class="playerimg" style="width: 3rem" src="./players/Ninos.png" alt="Player9" onclick="toggleSelection('player9')">
+        <img id="player7"class="playerimg"  src="./players/Mathias.png" alt="Player7" onclick="toggleSelection('player7')">
+        <img id="player8" class="playerimg"   src="./players/Marius.png" alt="Player8" onclick="toggleSelection('player8')">
+        <img id="player9"  class="playerimg"  src="./players/Ninos.png" alt="Player9" onclick="toggleSelection('player9')">
       </div>
-      <div>
+      <div style="display: flex; flex-direction: row; justify-content: flex-end; width: 100%; margin-top: 50px;">
       <img  id = "start-button" src="./players/startbtn.png" alt="Button" onclick="startGame()">
       </div>
     </div>
